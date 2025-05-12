@@ -1,0 +1,26 @@
+def calcula(peso, altura):
+        return peso / (altura ** 2)
+
+def classifica(imc):
+        if imc < 18.5:
+                return "Abaixo do peso!"
+        if imc < 25:
+                return "Peso normal!"
+        if imc < 30:
+                return "Sobrepeso"
+        if imc < 35:
+                return "Obesidade 1"
+        if imc < 40: 
+                return "Obesidade 2"
+        if imc >= 40:
+                return "Obesidade 3"
+
+nome = input("Digite seu nome:")
+altura = float(input("Digite sua altura(metros):"))
+peso = float(input("Digite seu peso(kg):"))
+
+imc = calcula(peso, altura)
+classificação = classifica(imc)
+
+print(f"\n {nome}, seu IMC é {imc:.2f}" )
+print(f"Classificação: {classificação}")
